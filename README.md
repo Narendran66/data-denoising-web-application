@@ -142,6 +142,45 @@ streamlit run app.py
   `streamlit run app.py --server.port 8502`
 
 This setup will let you run both a web-based UI for quick demos and a notebook/script for in-depth processing or batch jobs, leveraging your pretrained audio denoising neural network.
+### If error Comes Try this...
+The error message "Error: Invalid value: File does not exist: app.py" means that the file app.py is not present in the directory from which you are running the streamlit command.
 
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/88270084/6e1cca26-6c45-4eed-ac92-ca029ad2d51f/app.py)
-[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/88270084/e94cdbf7-4ff3-4265-9986-cf25432d2152/Inference-Code.ipynb)
+### How to Fix It
+
+#### 1. Check Your Current Folder
+- Make sure you are in the same folder where your `app.py` file is saved.
+
+#### 2. Move to Correct Directory
+- Use the `cd` (change directory) command in your terminal to navigate to the folder containing `app.py`, for example:
+
+```bash
+cd C:\Users\NARENDRAN\audio-denoising-app
+```
+*(Replace "audio-denoising-app" with your project folder name where app.py is saved.)*
+
+#### 3. List Files to Confirm
+- Check if `app.py` is present:
+
+```bash
+dir
+```
+or
+```bash
+ls
+```
+- If you see `app.py` in the output, proceed to the next step.
+
+#### 4. Run Streamlit Again
+
+```bash
+streamlit run app.py
+```
+
+#### 5. If You Don't Have `app.py`
+- Make sure you have created and saved `app.py` in the correct folder.
+- If you need the template, save the code from your project into a new file called `app.py` in the working directory.
+
+***
+
+**Summary:**  
+Make sure `app.py` exists in the folder where you are running your command. Navigate to that folder and retry your command.
